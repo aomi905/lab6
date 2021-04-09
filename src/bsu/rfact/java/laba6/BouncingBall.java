@@ -1,5 +1,6 @@
 package bsu.rfact.java.laba6;
 
+import bsu.rfact.java.laba6.Field;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 
@@ -31,6 +32,34 @@ public class BouncingBall implements Runnable{
         y = Math.random() * (field.getSize().getHeight() - 2 * radius) + radius;
         Thread thisThread = new Thread(this);
         thisThread.start();
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public void setSpeedX(double speedX) {
+        this.speedX = speedX;
+    }
+
+    public void setSpeedY(double speedY) {
+        this.speedY = speedY;
     }
 
     @Override
